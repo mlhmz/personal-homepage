@@ -1,10 +1,29 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} contactDeactivated >
+
+<BaseLayout
+  title={SITE_TITLE}
+  description={SITE_DESCRIPTION}
+  contactDeactivated
+>
   <main>
     <h1 class="text-4xl font-black">Malek Hamza</h1>
-    <h2 class="text-1xl">software developer, interested in new technologies 🚀</h2>
+    <h2 class="text-1xl">
+      software developer, interested in new technologies 🚀
+    </h2>
+    <div class="flex gap-3">
+      <a href="https://www.xing.com/profile/Malek_Hamza" target="_blank">
+        XING
+      </a>
+      <a
+        href="https://www.linkedin.com/in/malek-hamza-98254a248"
+        target="_blank"
+      >
+        LinkedIn
+      </a>
+      <a href="https://github.com/mlhmz" target="_blank"> GitHub</a>
+    </div>
   </main>
 </BaseLayout>
