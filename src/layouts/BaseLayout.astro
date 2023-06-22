@@ -7,9 +7,10 @@ import Header from "../components/Header.astro";
 interface Props {
   title: string;
   description: string;
+  contactDeactivated?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, contactDeactivated } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -17,9 +18,11 @@ const { title, description } = Astro.props;
   <head>
     <BaseHead title={title} description={description} />
   </head>
-  <body>
-    <Header title={title} />
-    <slot />
+  <body class="">
+    <Header contactDeactivated={contactDeactivated} />
+    <div class="mt-16">
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>

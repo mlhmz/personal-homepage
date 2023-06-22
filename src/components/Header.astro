@@ -1,20 +1,48 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
+
+interface Props {
+  contactDeactivated?: boolean;
+}
+
+const { contactDeactivated } = Astro.props;
 ---
 
-<header class="flex gap-3">
-  <h2 class="font-black">
-    {SITE_TITLE.toUpperCase()}
-  </h2>
-  <nav>
-    <HeaderLink href="/">Home</HeaderLink>
-    <HeaderLink href="/blog">Blog</HeaderLink>
-    <HeaderLink href="/about">About</HeaderLink>
-    <HeaderLink href="https://www.xing.com/profile/Malek_Hamza" target="_blank">XING</HeaderLink>
-    <HeaderLink href="https://www.linkedin.com/in/malek-hamza-98254a248" target="_blank">LinkedIn</HeaderLink>
-    <HeaderLink href="https://github.com/mlhmz" target="_blank">
-      GitHub
-    </HeaderLink>
+<header class="flex gap-3 w-screen">
+  <nav class="grid grid-cols-3 w-full m-0 p-5 fixed">
+    <div>
+      <a href="/" class="font-black no-underline">
+        {SITE_TITLE}
+      </a>
+    </div>
+    <div class="flex justify-center gap-3">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/about">About</HeaderLink>
+    </div>
+    <div id="nav-buttons" class="flex justify-end gap-3">
+      {
+        !contactDeactivated && (
+          <>
+            <HeaderLink
+              href="https://www.xing.com/profile/Malek_Hamza"
+              target="_blank"
+            >
+              XING
+            </HeaderLink>
+            <HeaderLink
+              href="https://www.linkedin.com/in/malek-hamza-98254a248"
+              target="_blank"
+            >
+              LinkedIn
+            </HeaderLink>
+            <HeaderLink href="https://github.com/mlhmz" target="_blank">
+              GitHub
+            </HeaderLink>
+          </>
+        )
+      }
+    </div>
   </nav>
 </header>
