@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { Icons } from "../components/Icons";
 ---
 
 <BaseLayout
@@ -9,23 +10,27 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   contactDeactivated
 >
   <main>
-    <img class="rounded-full" 
-    src="https://profile-images.xing.com/images/d9afdeb77be0729aa6ae5391f2112782-1/malek-hamza.256x256.jpg" />
+    <img
+      class="rounded-full"
+      src="https://profile-images.xing.com/images/d9afdeb77be0729aa6ae5391f2112782-1/malek-hamza.256x256.jpg"
+    />
     <h1 class="text-4xl font-black">Malek Hamza</h1>
     <h2 class="text-1xl">
-      software developer, interested in new technologies 🚀
+      Software developer, interested in new technologies 🚀
     </h2>
     <div class="flex gap-3">
       <a href="https://www.xing.com/profile/Malek_Hamza" target="_blank">
-        XING
+        <Icons.xing />
       </a>
       <a
         href="https://www.linkedin.com/in/malek-hamza-98254a248"
         target="_blank"
       >
-        LinkedIn
+        <Icons.linkedIn />
       </a>
-      <a href="https://github.com/mlhmz" target="_blank"> GitHub</a>
+      <a href="https://github.com/mlhmz" target="_blank"> 
+        <Icons.github />
+      </a>
     </div>
   </main>
 </BaseLayout>

@@ -1,18 +1,20 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
+import { Icons } from "./Icons";
 
 interface Props {
   contactDeactivated?: boolean;
 }
 
 const { contactDeactivated } = Astro.props;
+
 ---
 
 <header class="flex gap-3 w-screen">
   <nav class="grid grid-cols-3 w-full m-0 p-5 fixed">
     <div>
-      <a href="/" class="font-black no-underline">
+      <a href="/" class="font-bold text-2xl no-underline">
         {SITE_TITLE}
       </a>
     </div>
@@ -28,39 +30,16 @@ const { contactDeactivated } = Astro.props;
               href="https://www.xing.com/profile/Malek_Hamza"
               target="_blank"
             >
-              XING
+              <Icons.xing />
             </HeaderLink>
             <HeaderLink
               href="https://www.linkedin.com/in/malek-hamza-98254a248"
               target="_blank"
             >
-              LinkedIn
+              <Icons.linkedIn />
             </HeaderLink>
             <HeaderLink href="https://github.com/mlhmz" target="_blank">
-              GitHub
-            </HeaderLink>
-          </>
-        )
-      }
-    </div>
-    <div id="nav-buttons" class="flex justify-end gap-3">
-      {
-        !contactDeactivated && (
-          <>
-            <HeaderLink
-              href="https://www.xing.com/profile/Malek_Hamza"
-              target="_blank"
-            >
-              XING
-            </HeaderLink>
-            <HeaderLink
-              href="https://www.linkedin.com/in/malek-hamza-98254a248"
-              target="_blank"
-            >
-              LinkedIn
-            </HeaderLink>
-            <HeaderLink href="https://github.com/mlhmz" target="_blank">
-              GitHub
+              <Icons.github />
             </HeaderLink>
           </>
         )
