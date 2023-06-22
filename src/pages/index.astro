@@ -9,28 +9,32 @@ import { Icons } from "../components/Icons";
   description={SITE_DESCRIPTION}
   contactDeactivated
 >
-  <main>
-    <img
-      class="rounded-full"
-      src="https://profile-images.xing.com/images/d9afdeb77be0729aa6ae5391f2112782-1/malek-hamza.256x256.jpg"
-    />
-    <h1 class="text-4xl font-black">Malek Hamza</h1>
-    <h2 class="text-1xl">
-      Software developer, interested in new technologies 🚀
-    </h2>
-    <div class="flex gap-3">
-      <a href="https://www.xing.com/profile/Malek_Hamza" target="_blank">
-        <Icons.xing />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/malek-hamza-98254a248"
-        target="_blank"
-      >
-        <Icons.linkedIn />
-      </a>
-      <a href="https://github.com/mlhmz" target="_blank"> 
-        <Icons.github />
-      </a>
+  <main class="flex gap-5 justify-center">
+    <div class="flex items-center">
+      <img
+        class="rounded-full"
+        src="https://profile-images.xing.com/images/d9afdeb77be0729aa6ae5391f2112782-1/malek-hamza.256x256.jpg"
+      />
+    </div>
+    <div class="flex flex-col gap-2 justify-center">
+      <h1 class="text-4xl font-black">Malek Hamza</h1>
+      <h2 class="text-1xl">
+        Software developer, interested in new technologies 🚀
+      </h2>
+      <div class="flex gap-3">
+        <a href="https://www.xing.com/profile/Malek_Hamza" target="_blank">
+          <Icons.xing />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/malek-hamza-98254a248"
+          target="_blank"
+        >
+          <Icons.linkedIn />
+        </a>
+        <a href="https://github.com/mlhmz" target="_blank">
+          <Icons.github />
+        </a>
+      </div>
     </div>
   </main>
 </BaseLayout>
