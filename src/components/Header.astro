@@ -14,14 +14,14 @@ const { contactDeactivated } = Astro.props;
 <header class="flex gap-3 w-screen">
   <nav class="grid grid-cols-3 w-full m-0 p-5 fixed">
     <div>
-      <a href="/" class="font-bold text-2xl no-underline">
+      <a href="/personal-homepage/" class="font-bold text-2xl no-underline">
         {SITE_TITLE}
       </a>
     </div>
     <div class="flex justify-center gap-3">
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/blog">Blog</HeaderLink>
-      <HeaderLink href="/about">About</HeaderLink>
+      <HeaderLink href="/personal-homepage/">Home</HeaderLink>
+      <HeaderLink href="/personal-homepage/blog">Blog</HeaderLink>
+      <HeaderLink href="/personal-homepage/about">About</HeaderLink>
     </div><div id="nav-buttons" class="flex justify-end gap-3">
       {
         !contactDeactivated && (
