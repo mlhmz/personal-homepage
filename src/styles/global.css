@@ -3,9 +3,20 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    scrollbar-gutter: stable;
+  ::-webkit-scrollbar {
+    width: 0.2rem;
+  }
 
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, #cdcdcd 80px, #dadbd6 80px, #dadbd6 100%);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0.815rem;
+    background-color: #484845;
+  }
+
+  :root {
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
 
@@ -39,7 +50,7 @@
   }
 
   .dark {
-    --background: 224 71% 4%;
+    --background: 230 32% 10%;
     --foreground: 213 31% 91%;
 
     --muted: 223 47% 11%;
