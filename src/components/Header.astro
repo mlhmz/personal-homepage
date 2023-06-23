@@ -2,6 +2,7 @@
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 import { Icons } from "./Icons";
+import ThemeToggle from "./ThemeToggle";
 
 interface Props {
   contactDeactivated?: boolean;
@@ -44,6 +45,7 @@ const { contactDeactivated } = Astro.props;
           </>
         )
       }
+      <ThemeToggle client:load />
     </div>
   </nav>
 </header>

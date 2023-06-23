@@ -3,6 +3,8 @@ import {
   LinkedinIcon,
   LucideProps,
   type LucideIcon,
+  Sun,
+  Moon,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -10,18 +12,21 @@ export type Icon = LucideIcon;
 export const Icons = {
   github: GithubIcon,
   linkedIn: LinkedinIcon,
+  sun: Sun,
+  moon: Moon,
   xing: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24px"
       height="24px"
-      className="stroke stroke-black stroke-[10px] antialiased"
+      className="stroke stroke-primary fill-primary stroke-[10px] antialiased"
       viewBox="0 0 612 612"
       {...props}
     >
         <g>
           <g id="group-38svg">
             <path
+              color="currentColor"
               id="path-1_31_"
               d="M160.391,417.714H54.502c-4.058,0-16.416,0-23.104-11.475c-4.776-8.338-4.776-16.706-0.039-24.938
 				l98.822-171.997l-46.703-96.056c-4.077-8.251-3.514-20.386,1.34-28.151c3.922-6.339,10.581-17.095,22.628-17.095h105.889
@@ -31,6 +36,7 @@ export const Icons = {
 				c-0.058,0.417-0.058,1.02,0,1.32l49.809,102.298c2.107,4.339,1.932,9.455-0.466,13.639L60.763,388.572z"
             />
             <path
+              color="currentColor"
               id="path-2_21_"
               d="M504.552,612h-105.89c-4.058,0-16.415,0-23.065-11.455L243.235,373.904
 				c-4.747-8.193-4.834-18.784-0.233-27.017L428.328,15.736C433.939,5.854,442.617,0,451.606,0h105.909
