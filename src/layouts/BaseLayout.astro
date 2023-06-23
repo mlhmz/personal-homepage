@@ -14,7 +14,7 @@ const { title, description, contactDeactivated } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="text-primary">
   <head>
     <BaseHead title={title} description={description} />
   </head>
@@ -48,9 +48,3 @@ const { title, description, contactDeactivated } = Astro.props;
   }
   window.localStorage.setItem("theme", theme);
 </script>
-
-<style is:global>
-html {
-  @apply text-primary
-}
-</style>
