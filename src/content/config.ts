@@ -20,11 +20,14 @@ const blog = defineCollection({
 
 const portfolio = defineCollection({
 	schema: z.object({
+		index: z.number().min(1),
 		name: z.string(),
-		heroImage: z.string().optional(),
 		technologies: z.string().array().optional(),
 		gitHubLink: z.string().url().optional(),
-	})
-})
+		shortDescription: z.string(),
+	}),
+});
 
-export const collections = { blog };
+export const collections = { 
+	blog, 
+	portfolio };
