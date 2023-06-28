@@ -1,10 +1,9 @@
 ---
-import About from "../content/main/About.mdx";
-import Experience from "../content/main/Experience.mdx";
-import { Icons } from "../components/Icons";
 import IntroductionCard from "../components/IntroductionCard.astro";
 import ProjectList from "../components/ProjectList.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import About from "../content/main/About.mdx";
+import Experience from "../content/main/Experience.mdx";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
@@ -17,19 +16,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <About />
     </div>
     <hr />
-    <div id="experience">
+    <div id="experience" class="flex flex-col gap-2">
       <h1 class="text-2xl font-bold">Experience</h1>
-      <h2 class="text-muted-foreground">
+      <p class="text-muted-foreground">
         A list of technologies i worked a lot with
-      </h2>
+      </p>
       <Experience />
     </div>
     <hr />
     <div id="projects" class="flex flex-col gap-2">
       <h1 class="text-2xl font-bold">Portfolio</h1>
-      <h2 class="text-base text-muted-foreground">
+      <p class="text-muted-foreground">
         Projects that i made in my freetime or in school
-      </h2>
+      </p>
       <ProjectList />
     </div>
   </main>
