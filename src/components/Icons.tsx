@@ -7,7 +7,8 @@ import {
   Sun,
   type LucideIcon,
   Loader,
-  Mail
+  Mail,
+  Rss
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -20,6 +21,7 @@ export const Icons = {
   moon: Moon,
   spinner: Loader,
   mail: Mail,
+  rss: Rss,
   xing: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
