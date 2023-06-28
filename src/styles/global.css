@@ -8,7 +8,12 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: linear-gradient(to bottom, #cdcdcd 80px, #dadbd6 80px, #dadbd6 100%);
+    background: linear-gradient(
+      to bottom,
+      #cdcdcd 80px,
+      #dadbd6 80px,
+      #dadbd6 100%
+    );
   }
 
   ::-webkit-scrollbar-thumb {
@@ -80,5 +85,30 @@
     --ring: 216 34% 17%;
 
     --radius: 0.5rem;
+  }
+
+  h1 {
+    @apply text-2xl
+  }
+
+  h2 {
+    @apply text-xl
+  }
+
+  h3 {
+    @apply text-lg
+  }
+
+  h4 {
+    @apply text-base
+  }
+
+  h5 {
+    @apply text-sm
+  }
+
+  li {
+    list-style-type: "- ";
+    list-style-position: inside;
   }
 }
