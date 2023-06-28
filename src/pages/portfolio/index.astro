@@ -1,35 +1,13 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
-
-const projects = (await getCollection("portfolio")).sort(
-  (a, b) => a.data.index - b.data.index
-);
+import ProjectList from "../../components/ProjectList.astro";
 ---
 
 <BaseLayout
   title={SITE_TITLE + " - " + "Portfolio"}
   description={SITE_DESCRIPTION}
 >
-  <div>
-    <h1>Projects</h1>
-    <ul>
-      {
-        projects.map((project) => (
-          <li class="flex flex-col gap-2">
-            <a
-              class="font-bold underline underline-offset-4"
-              href={`/personal-homepage/portfolio/${project.slug}/`}
-            >
-              {project.data.name}
-            </a>
-            <p class="text-muted-foreground text-sm">
-              {project.data.shortDescription}
-            </p>
-          </li>
-        ))
-      }
-    </ul>
-  </div>
+  <h1>Projects</h1>
+  <ProjectList />
 </BaseLayout>
