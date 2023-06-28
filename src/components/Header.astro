@@ -1,6 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
+import { GITHUB_LINK, LINKED_IN_LINK, MAIL_LINK, SITE_TITLE, XING_LINK } from "../consts";
 import { Icons } from "./Icons";
 import ThemeToggle from "./ThemeToggle";
 
@@ -13,7 +13,10 @@ const { mainPage: mainPage } = Astro.props;
 
 <header class="flex gap-3 w-screen">
   <nav
-    class="md:grid grid-cols-2 w-full m-0 p-5 bg-background/75 fixed border-b border-b-border backdrop-blur-2xl transition-all"
+    class:list={[
+      { "md:grid": !mainPage },
+      "grid-cols-2 w-full m-0 p-5 bg-background/75 fixed border-b border-b-border backdrop-blur-2xl transition-all",
+    ]}
   >
     <div class="flex gap-3 items-center">
       {
@@ -32,24 +35,35 @@ const { mainPage: mainPage } = Astro.props;
         )
       }
     </div>
-    <div id="nav-buttons" class="hidden md:flex justify-end items-center gap-3">
+    <div
+      id="nav-buttons"
+      class:list={[
+        "flex",
+        { "justify-end": !mainPage },
+        "items-center",
+        "gap-3",
+      ]}
+    >
       {
         !mainPage && (
           <>
             <HeaderLink
-              href="https://www.xing.com/profile/Malek_Hamza"
+              href={XING_LINK}
               target="_blank"
             >
               <Icons.xing />
             </HeaderLink>
             <HeaderLink
-              href="https://www.linkedin.com/in/malek-hamza-98254a248"
+              href={LINKED_IN_LINK}
               target="_blank"
             >
               <Icons.linkedIn />
             </HeaderLink>
-            <HeaderLink href="https://github.com/mlhmz" target="_blank">
+            <HeaderLink href={GITHUB_LINK} target="_blank">
               <Icons.github />
+            </HeaderLink>
+            <HeaderLink href={MAIL_LINK}>
+              <Icons.mail />
             </HeaderLink>
           </>
         )

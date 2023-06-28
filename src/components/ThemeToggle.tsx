@@ -25,7 +25,7 @@ export default function ThemeToggle() {
 
 
   if (!isMounted) {
-    return <></>;
+    return <Icons.spinner className="animate-spin" aria-label="Initializing theme" />;
   }
   return (
     <a onClick={themeToggle}>{ theme === "white" ? <Icons.sun /> : <Icons.moon /> }</a>

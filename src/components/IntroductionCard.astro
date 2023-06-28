@@ -1,5 +1,6 @@
 ---
 import { Icons } from "./Icons";
+import { LINKED_IN_LINK, GITHUB_LINK, MAIL_LINK, XING_LINK } from "../consts"
 ---
 
 <div id="introduction" class="flex gap-5 justify-center">
@@ -22,17 +23,20 @@ import { Icons } from "./Icons";
       >, interested in new technologies 🚀
     </h2>
     <div class="flex gap-3">
-      <a href="https://www.xing.com/profile/Malek_Hamza" target="_blank">
+      <a href={XING_LINK} aria-label="My Mail: malek.hamza@tuta.io" target="_blank">
         <Icons.xing aria-label="My GitHub Profile" />
       </a>
       <a
-        href="https://www.linkedin.com/in/malek-hamza-98254a248"
+        href={LINKED_IN_LINK}
         target="_blank"
       >
         <Icons.linkedIn aria-label="My GitHub Profile" />
       </a>
-      <a href="https://github.com/mlhmz" target="_blank">
+      <a href={GITHUB_LINK} target="_blank">
         <Icons.github aria-label="My GitHub Profile" />
+      </a>
+      <a href={MAIL_LINK} target="_blank">
+        <Icons.mail />
       </a>
     </div>
   </div>

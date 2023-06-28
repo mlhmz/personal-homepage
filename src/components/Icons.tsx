@@ -5,7 +5,9 @@ import {
   LucideProps,
   Moon,
   Sun,
-  type LucideIcon
+  type LucideIcon,
+  Loader,
+  Mail
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -16,6 +18,8 @@ export const Icons = {
   linkedIn: LinkedinIcon,
   sun: Sun,
   moon: Moon,
+  spinner: Loader,
+  mail: Mail,
   xing: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
