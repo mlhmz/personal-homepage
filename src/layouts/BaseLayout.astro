@@ -7,10 +7,10 @@ import Header from "../components/Header.astro";
 interface Props {
   title: string;
   description: string;
-  contactDeactivated?: boolean;
+  mainPage?: boolean;
 }
 
-const { title, description, contactDeactivated } = Astro.props;
+const { title, description, mainPage } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ const { title, description, contactDeactivated } = Astro.props;
     <BaseHead title={title} description={description} />
   </head>
   <body class="bg-background antialiased transition-colors">
-    <Header contactDeactivated={contactDeactivated} />
+    <Header mainPage={mainPage} />
     <div class="container mt-[100px]">
       <slot />
     </div>

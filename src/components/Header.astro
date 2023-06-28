@@ -5,22 +5,36 @@ import { Icons } from "./Icons";
 import ThemeToggle from "./ThemeToggle";
 
 interface Props {
-  contactDeactivated?: boolean;
+  mainPage?: boolean;
 }
 
-const { contactDeactivated } = Astro.props;
+const { mainPage: mainPage } = Astro.props;
 ---
 
 <header class="flex gap-3 w-screen">
-  <nav class="md:grid grid-cols-2 w-full m-0 p-5 fixed bg-background border-b border-b-border opacity-80 backdrop-blur-md transition-all">
-    <div>
-      <a href="/personal-homepage/" class="font-bold text-2xl no-underline">
-        {SITE_TITLE}
-      </a>
+  <nav
+    class="md:grid grid-cols-2 w-full m-0 p-5 bg-background/75 fixed border-b border-b-border backdrop-blur-2xl transition-all"
+  >
+    <div class="flex gap-3 items-center">
+      {
+        !mainPage && (
+          <>
+            <a onclick="window.history.back()" class="cursor-pointer">
+              <Icons.back />
+            </a>
+            <a
+              href="/personal-homepage/"
+              class="font-bold text-2xl no-underline"
+            >
+              {SITE_TITLE}
+            </a>
+          </>
+        )
+      }
     </div>
     <div id="nav-buttons" class="hidden md:flex justify-end items-center gap-3">
       {
-        !contactDeactivated && (
+        !mainPage && (
           <>
             <HeaderLink
               href="https://www.xing.com/profile/Malek_Hamza"

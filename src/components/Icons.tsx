@@ -1,15 +1,17 @@
 import {
+  ArrowLeft,
   GithubIcon,
   LinkedinIcon,
   LucideProps,
-  type LucideIcon,
-  Sun,
   Moon,
+  Sun,
+  type LucideIcon
 } from "lucide-react";
 
 export type Icon = LucideIcon;
 
 export const Icons = {
+  back: ArrowLeft,
   github: GithubIcon,
   linkedIn: LinkedinIcon,
   sun: Sun,

@@ -9,7 +9,7 @@ import ProjectList from "../components/ProjectList.astro";
 <BaseLayout
   title={SITE_TITLE}
   description={SITE_DESCRIPTION}
-  contactDeactivated
+  mainPage
 >
   <main class="flex flex-col gap-5">
     <div id="introduction" class="flex gap-5 justify-center">
@@ -54,7 +54,7 @@ import ProjectList from "../components/ProjectList.astro";
       <About />
     </div>
     <hr />
-    <div id="projects" class="flex flex-col gap.2">
+    <div id="projects" class="flex flex-col gap-2">
       <h1 class="text-2xl font-bold">Projects</h1>
       <ProjectList />
     </div>
