@@ -21,7 +21,7 @@ const { index, name, gitHubLink, technologies } = Astro.props;
         <ul class="flex gap-2 items-center">
           {
             technologies?.map((technology) => (
-              <li class="px-2 rounded-md bg-secondary">{technology}</li>
+              <li class="px-2 rounded-md bg-secondary list-none">{technology}</li>
             ))
           }
         </ul>
