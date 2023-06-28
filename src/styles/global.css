@@ -7,15 +7,6 @@
     width: 0.2rem;
   }
 
-  ::-webkit-scrollbar-track {
-    background: linear-gradient(
-      to bottom,
-      #cdcdcd 80px,
-      #dadbd6 80px,
-      #dadbd6 100%
-    );
-  }
-
   ::-webkit-scrollbar-thumb {
     border-radius: 0.815rem;
     background-color: #484845;
