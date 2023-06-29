@@ -1,18 +1,18 @@
 ---
 import { Icons } from "./Icons";
-import { LINKED_IN_LINK, GITHUB_LINK, MAIL_LINK, XING_LINK } from "../consts"
+import { LINKED_IN_LINK, GITHUB_LINK, MAIL_LINK, XING_LINK } from "../consts";
 ---
 
-<div id="introduction" class="flex gap-5 justify-center">
+<div id="introduction" class="flex justify-center gap-5">
   <div class="flex items-center">
     <img
       class="rounded-full"
       src="https://profile-images.xing.com/images/d9afdeb77be0729aa6ae5391f2112782-1/malek-hamza.256x256.jpg"
       alt="A picture of me (Malek Hamza) from my XING"
-      class="w-[256px] h-[256px]"
+      class="h-[256px] w-[256px]"
     />
   </div>
-  <div class="flex flex-col gap-3 justify-center">
+  <div class="flex flex-col justify-center gap-3">
     <h1 class="text-4xl font-black">Malek Hamza</h1>
     <p>
       Software Developer, based in <a
@@ -26,10 +26,7 @@ import { LINKED_IN_LINK, GITHUB_LINK, MAIL_LINK, XING_LINK } from "../consts"
       <a href={XING_LINK} aria-label="My Mail: malek.hamza@tuta.io" target="_blank">
         <Icons.xing aria-label="My GitHub Profile" />
       </a>
-      <a
-        href={LINKED_IN_LINK}
-        target="_blank"
-      >
+      <a href={LINKED_IN_LINK} target="_blank">
         <Icons.linkedIn aria-label="My GitHub Profile" />
       </a>
       <a href={GITHUB_LINK} target="_blank">

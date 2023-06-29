@@ -7,10 +7,11 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "lint:fix": "eslint --fix",
     "astro": "astro",
     "format:write": "prettier --write \"**/*.{ts,tsx,mdx,astro}\" --cache",
     "format:check": "prettier --check \"**/*.{ts,tsx,mdx,astro}\" --cache",
-    "fix:all": "npm run format:write"
+    "fix:all": "npm run format:write && npm run lint:fix"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.19.7",

@@ -3,9 +3,7 @@ import { Icons } from "./Icons";
 
 export default function ThemeToggle() {
   const THEME_KEY = "theme";
-  const [theme, setTheme] = useState(
-    localStorage.getItem(THEME_KEY) ?? "white"
-  );
+  const [theme, setTheme] = useState(localStorage.getItem(THEME_KEY) ?? "white");
   const [isMounted, setIsMounted] = useState(false);
   const [isChanging, setIsChanging] = useState(false);
 
@@ -30,17 +28,12 @@ export default function ThemeToggle() {
   }, []);
 
   if (!isMounted) {
-    return (
-      <Icons.spinner className="animate-spin" aria-label="Initializing theme" />
-    );
+    return <Icons.spinner className="animate-spin" aria-label="Initializing theme" />;
   }
   return (
     <a
-      className={
-        "cursor-pointer" + (isChanging && theme == "white" && " animate-spin")
-      }
-      onClick={themeToggle}
-    >
+      className={"cursor-pointer" + (isChanging && theme == "white" && " animate-spin")}
+      onClick={themeToggle}>
       {theme === "white" ? <Icons.sun /> : <Icons.moon />}
     </a>
   );

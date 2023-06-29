@@ -1,9 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
-const projects = (await getCollection("portfolio")).sort(
-  (a, b) => a.data.index - b.data.index
-);
+const projects = (await getCollection("portfolio")).sort((a, b) => a.data.index - b.data.index);
 ---
 
 <div>
@@ -13,13 +11,10 @@ const projects = (await getCollection("portfolio")).sort(
         <li class="flex flex-col gap-2">
           <a
             class="font-bold underline underline-offset-4"
-            href={`/personal-homepage/portfolio/${project.slug}/`}
-          >
+            href={`/personal-homepage/portfolio/${project.slug}/`}>
             {project.data.name}
           </a>
-          <p class="text-muted-foreground text-sm">
-            {project.data.shortDescription}
-          </p>
+          <p class="text-sm text-muted-foreground">{project.data.shortDescription}</p>
         </li>
       ))
     }
