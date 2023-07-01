@@ -28,11 +28,11 @@ export default function ThemeToggle() {
   }, []);
 
   if (!isMounted) {
-    return <Icons.spinner className="animate-spin" aria-label="Initializing theme" />;
+    return <Icons.spinner className="animate-spin ease-in-out" aria-label="Initializing theme" />;
   }
   return (
     <a
-      className={"cursor-pointer" + (isChanging && theme == "white" && " animate-spin")}
+      className={"cursor-pointer" + (isChanging && theme == "white" && " animate-spin ease-in-out")}
       onClick={themeToggle}>
       {theme === "white" ? <Icons.sun /> : <Icons.moon />}
     </a>
