@@ -1,0 +1,15 @@
+---
+type Props = {
+  technologies: string[];
+};
+
+const { technologies } = Astro.props; 
+---
+
+<ul class="flex items-center gap-2 flex-wrap">
+  {
+    technologies?.map((technology) => (
+      <li class="list-none rounded-md bg-secondary px-2"><p>{technology}</p></li>
+    ))
+  }
+</ul>

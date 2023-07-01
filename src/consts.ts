@@ -7,3 +7,13 @@ export const LINKED_IN_LINK = "https://www.linkedin.com/in/malek-hamza-98254a248
 export const XING_LINK = "https://www.xing.com/profile/Malek_Hamza";
 export const GITHUB_LINK = "https://github.com/mlhmz";
 export const MAIL_LINK = "mailto:malek.hamza@tuta.io";
+export const TECHNOLOGIES = [
+  "Spring Boot",
+  "React.js",
+  "Docker",
+  "Git",
+  "SQL (MySQL, MariaDB, PostgreSQL)",
+  "Prometheus",
+  "Grafana",
+  "Jenkins",
+];

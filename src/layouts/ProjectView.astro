@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import { Icons } from "../components/Icons";
+import StringTagList from "../components/StringTagList.astro";
 
 type Props = CollectionEntry<"portfolio">["data"];
 
@@ -18,13 +19,7 @@ const { index, name, gitHubLink, technologies } = Astro.props;
       </div>
       <div class="flex items-center gap-2">
         <p>Technologies:</p>
-        <ul class="flex items-center gap-2">
-          {
-            technologies?.map((technology) => (
-              <li class="list-none rounded-md bg-secondary px-2">{technology}</li>
-            ))
-          }
-        </ul>
+        <StringTagList technologies={technologies} />
       </div>
       <div>
         <slot />
