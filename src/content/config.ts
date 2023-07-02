@@ -7,6 +7,7 @@ const portfolio = defineCollection({
     technologies: z.string().array().optional(),
     gitHubLink: z.string().url().optional(),
     shortDescription: z.string(),
+    imageSlide: z.string().array().optional(),
   }),
 });
 

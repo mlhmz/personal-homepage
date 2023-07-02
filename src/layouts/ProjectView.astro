@@ -4,10 +4,11 @@ import BaseLayout from "./BaseLayout.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import { Icons } from "../components/Icons";
 import StringTagList from "../components/StringTagList.astro";
+import ImageSlide from "../components/ImageSlide";
 
 type Props = CollectionEntry<"portfolio">["data"];
 
-const { index, name, gitHubLink, technologies } = Astro.props;
+const { index, name, gitHubLink, technologies, imageSlide } = Astro.props;
 ---
 
 <BaseLayout title={SITE_TITLE + " - " + name} description={SITE_DESCRIPTION}>
@@ -19,7 +20,11 @@ const { index, name, gitHubLink, technologies } = Astro.props;
       </div>
       <div class="flex items-center gap-2">
         <p>Technologies:</p>
-        <StringTagList technologies={technologies} />
+        {technologies && <StringTagList technologies={technologies} />}
+      </div>
+      <div>
+        <h2 class="text-xl font-bold my-2">Preview</h2>
+        {imageSlide && <ImageSlide imageUrls={imageSlide} client:load />}
       </div>
       <div class="flex flex-col gap-2">
         <slot />
