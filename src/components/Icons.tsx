@@ -9,6 +9,7 @@ import {
   Loader,
   Mail,
   Rss,
+  X,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -22,6 +23,7 @@ export const Icons = {
   spinner: Loader,
   mail: Mail,
   rss: Rss,
+  x: X,
   xing: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
