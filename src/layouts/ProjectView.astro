@@ -21,7 +21,7 @@ const { index, name, gitHubLink, technologies } = Astro.props;
         <p>Technologies:</p>
         <StringTagList technologies={technologies} />
       </div>
-      <div>
+      <div class="flex flex-col gap-2">
         <slot />
       </div>
     </article>
