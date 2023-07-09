@@ -2,11 +2,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import "swiper/css";
-import ImageSlideElement from "./ImageSlideElement";
 import { useState } from "react";
-import { Icons } from "./Icons";
+import "swiper/css";
 import BigPictureView from "./BigPictureView";
+import ImageSlideElement from "./ImageSlideElement";
+import ImageSlideNavigation from "./ImageSlideNavigation";
 
 interface BigPicture {
   shown: boolean;
@@ -22,6 +22,7 @@ export default function ImageSlide({ imageUrls }: { imageUrls: string[] }) {
         <BigPictureView imgUrl={bigPicture.imgUrl} onClose={() => setBigPicture({ shown: false })} />
       )}
       <Swiper>
+        <ImageSlideNavigation />
         {imageUrls.map((imageUrl) => (
           <SwiperSlide key={imageUrl}>
             <ImageSlideElement

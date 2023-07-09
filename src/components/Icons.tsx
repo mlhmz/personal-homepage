@@ -10,6 +10,8 @@ import {
   Mail,
   Rss,
   X,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -24,6 +26,8 @@ export const Icons = {
   mail: Mail,
   rss: Rss,
   x: X,
+  chevronLeft: ChevronLeft,
+  chevronRight: ChevronRight,
   xing: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
