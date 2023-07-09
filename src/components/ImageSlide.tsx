@@ -1,5 +1,5 @@
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperElement, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import { useState } from "react";
@@ -7,6 +7,7 @@ import "swiper/css";
 import BigPictureView from "./BigPictureView";
 import ImageSlideElement from "./ImageSlideElement";
 import ImageSlideNavigation from "./ImageSlideNavigation";
+import type Swiper from "swiper";
 
 interface BigPicture {
   shown: boolean;
@@ -15,14 +16,17 @@ interface BigPicture {
 
 export default function ImageSlide({ imageUrls }: { imageUrls: string[] }) {
   const [bigPicture, setBigPicture] = useState({} as BigPicture);
+  const [slideCount, setSlideCount] = useState("");
+
+  const setSlideCountToSwiperData = (swiper: Swiper) => setSlideCount(`${swiper.activeIndex + 1} / ${swiper.slides.length}`);
 
   return (
     <>
       {bigPicture.shown && (
         <BigPictureView imgUrl={bigPicture.imgUrl} onClose={() => setBigPicture({ shown: false })} />
       )}
-      <Swiper>
-        <ImageSlideNavigation />
+      <SwiperElement onInit={setSlideCountToSwiperData} onSlideChange={setSlideCountToSwiperData}>
+        <ImageSlideNavigation slideCount={slideCount} />
         {imageUrls.map((imageUrl) => (
           <SwiperSlide key={imageUrl}>
             <ImageSlideElement
@@ -31,7 +35,7 @@ export default function ImageSlide({ imageUrls }: { imageUrls: string[] }) {
             />
           </SwiperSlide>
         ))}
-      </Swiper>
+      </SwiperElement>
     </>
   );
 }
