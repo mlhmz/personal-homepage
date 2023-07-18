@@ -1,4 +1,4 @@
-# My personal homepage
+# My personal homepage 🚀
 
 This is the repo of my personal homepage.
 
@@ -8,7 +8,7 @@ It is served over GitHub Pages and my Domain [mlhmz.xyz](https://mlhmz.xyz) is l
 
 By using [astro.build](https://astro.build) i tried to reach a good performance and seo.
 
-## Technologies 🚀
+## Technologies 💻
 
 Here is a overall overview about the technologies my website is using:
 
