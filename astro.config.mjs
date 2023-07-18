@@ -7,7 +7,6 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://mlhmz.github.io',
-  base: '/personal-homepage',
+  site: 'https://mlhmz.xyz',
   integrations: [mdx(), sitemap(), tailwind(), react()]
 });
