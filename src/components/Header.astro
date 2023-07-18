@@ -14,8 +14,8 @@ const { mainPage: mainPage } = Astro.props;
 <header class="flex w-screen gap-3">
   <nav
     class:list={[
-      { "md:grid": !mainPage },
-      "grid-cols-2 w-full m-0 p-5 bg-background/75 fixed border-b border-b-border backdrop-blur-2xl transition-all z-10",
+      mainPage ? "justify-end" : "justify-between",
+      "flex w-full m-0 p-5 bg-background/75 fixed border-b border-b-border backdrop-blur-2xl transition-all z-10",
     ]}>
     <div class="flex items-center gap-3">
       {
@@ -31,7 +31,7 @@ const { mainPage: mainPage } = Astro.props;
         )
       }
     </div>
-    <div id="nav-buttons" class:list={["flex", { "justify-end": !mainPage }, "items-center", "gap-3"]}>
+    <div id="nav-buttons" class="flex justify-end items-center gap-3">
       {
         !mainPage && (
           <>
