@@ -35,16 +35,16 @@ const { mainPage: mainPage } = Astro.props;
       {
         !mainPage && (
           <>
-            <HeaderLink href={XING_LINK} target="_blank">
+            <HeaderLink href={XING_LINK} target="_blank" aria-label="My XING Profile">
               <Icons.xing />
             </HeaderLink>
-            <HeaderLink href={LINKED_IN_LINK} target="_blank">
+            <HeaderLink href={LINKED_IN_LINK} target="_blank" aria-label="My LinkedIn Profile">
               <Icons.linkedIn />
             </HeaderLink>
-            <HeaderLink href={GITHUB_LINK} target="_blank">
+            <HeaderLink href={GITHUB_LINK} target="_blank" aria-label="My GitHub Profile">
               <Icons.github />
             </HeaderLink>
-            <HeaderLink href={MAIL_LINK}>
+            <HeaderLink href={MAIL_LINK} aria-label="My E-Mail Profile">
               <Icons.mail />
             </HeaderLink>
           </>
