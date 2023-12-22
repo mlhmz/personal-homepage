@@ -25,10 +25,12 @@ export default function ThemeToggle() {
     return <Icons.spinner className="animate-spin ease-in-out" aria-label="Initializing theme" />;
   }
   return (
-    <a
+    <button
+      title="Toggle theme"
+      aria-label="Toggle theme"
       className={"cursor-pointer"}
       onClick={themeToggle}>
       {theme === "white" ? <Icons.sun /> : <Icons.moon />}
-    </a>
+    </button>
   );
 }
