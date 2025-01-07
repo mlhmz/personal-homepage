@@ -8,12 +8,20 @@ export const XING_LINK = "https://www.xing.com/profile/Malek_Hamza";
 export const GITHUB_LINK = "https://github.com/mlhmz";
 export const MAIL_LINK = "mailto:malek.hamza@tuta.io";
 export const TECHNOLOGIES = [
+  "Java",
+  "Jakarta EE",
   "Spring Boot",
+  "JPA",
   "React.js",
+  "Next.js",
+  "drizzle ORM",
+  "JS/TS",
+  "Go",
   "Docker",
   "Git",
   "SQL (MySQL, MariaDB, PostgreSQL)",
   "Prometheus",
   "Grafana",
   "Jenkins",
+  "GitLab CI"
 ];
