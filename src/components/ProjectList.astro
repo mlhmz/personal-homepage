@@ -5,13 +5,15 @@ const projects = (await getCollection("portfolio")).sort((a, b) => a.data.index 
 ---
 
 <div>
-  <ul>
+  <ul class="flex flex-col gap-4 my-2">
     {
       projects.map((project) => (
         <li class="flex flex-col gap-2">
           <a
             class="font-bold underline underline-offset-4"
-            href={`/portfolio/${project.slug}/`}>
+            href={`/portfolio/${project.slug}/`}
+            aria-label={`View project: ${project.data.name}`}
+            >
             {project.data.name}
           </a>
           <p class="text-sm text-muted-foreground">{project.data.shortDescription}</p>
